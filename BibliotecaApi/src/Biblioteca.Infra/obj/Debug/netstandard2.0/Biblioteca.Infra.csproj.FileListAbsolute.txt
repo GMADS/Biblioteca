@@ -48,3 +48,16 @@ C:\Users\guilh\OneDrive\Área de Trabalho\Projetos\Biblioteca\BibliotecaApi\src\
 C:\Users\guilh\OneDrive\Área de Trabalho\Projetos\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.CopyComplete
 C:\Users\guilh\OneDrive\Área de Trabalho\Projetos\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.dll
 C:\Users\guilh\OneDrive\Área de Trabalho\Projetos\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.pdb
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Infra.deps.json
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Infra.dll
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Infra.pdb
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Domain.dll
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Domain.pdb
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.AssemblyReference.cache
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.AssemblyInfoInputs.cache
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.AssemblyInfo.cs
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.CoreCompileInputs.cache
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.CopyComplete
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.dll
+C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.pdb

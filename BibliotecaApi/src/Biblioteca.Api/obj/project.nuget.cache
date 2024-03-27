@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qSGQuuTG81p95P71Zcq/dhJeyRLOjZ5XVfqOY4iGau45jXozfbnIRJ6aUJCTJaX84EPaYvnesI7eEcD486v6jg==",
+  "dgSpecHash": "NLQT5iv53ft4zPhGl7wWDU57uThwbup4wqoQcG16rgnZqMJyo/WhNhhhtR1VXlK4n2PV4iNc8E+/l7lagyg2DQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\guilh\\OneDrive\\Área de Trabalho\\Projetos\\Biblioteca\\BibliotecaApi\\src\\Biblioteca.Api\\BibliotecaApi.csproj",
+  "projectFilePath": "C:\\Repo\\Biblioteca\\BibliotecaApi\\src\\Biblioteca.Api\\BibliotecaApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\guilh\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

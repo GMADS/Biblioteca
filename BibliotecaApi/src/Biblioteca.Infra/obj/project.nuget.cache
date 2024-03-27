@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BmytKVMFf3Rgw81o83nmDh5xlgrhoRcSSNoeRdHzXYRXH4+9/XOxFbv2o7J/L2Cu6IeRn/JeZaxAlAg8t/mB+Q==",
+  "dgSpecHash": "mQMa95ruHf36nyV+twardI+CdClxK8fMusXC1SaHSczqSbApSK02mWyHgucLOcIucrhJ/blalV4cSQkGRCqORw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\guilh\\OneDrive\\Área de Trabalho\\Projetos\\Biblioteca\\BibliotecaApi\\src\\Biblioteca.Infra\\Biblioteca.Infra.csproj",
+  "projectFilePath": "C:\\Repo\\Biblioteca\\BibliotecaApi\\src\\Biblioteca.Infra\\Biblioteca.Infra.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\guilh\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -32,7 +33,7 @@
     "C:\\Users\\guilh\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
-    "C:\\Users\\guilh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    "C:\\Users\\guilh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

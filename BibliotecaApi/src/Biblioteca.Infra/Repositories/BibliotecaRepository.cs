@@ -18,24 +18,24 @@ namespace Biblioteca.Infra.Repositories
             _context = context;
         }
 
-        public void Adicionar(Livros biblioteca)
+        public void Adicionar(Livro biblioteca)
         {
             _context.Add(biblioteca);
             _context.SaveChanges();
         }
 
-        public void Alterar(Livros biblioteca)
+        public void Alterar(Livro biblioteca)
         {
             _context.Entry(biblioteca).State = EntityState.Modified;
             _context.SaveChanges();
         }
 
-        public IEnumerable<Livros> ListarBibliotecas()
+        public IEnumerable<Livro> ListarBibliotecas()
         {
             return _context.Bibliotecas.ToList();
         }
 
-        public Livros ObterPorId(int id)
+        public Livro ObterPorId(int id)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Biblioteca.Infra.Repositories
                 throw new ArgumentException("Erro ao obter livro");
             }
         }
-        public void RemoverBiblioteca(Livros biblioteca)
+        public void RemoverBiblioteca(Livro biblioteca)
         {
             _context.Remove(biblioteca);
             _context.SaveChanges();

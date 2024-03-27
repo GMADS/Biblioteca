@@ -6,10 +6,10 @@ namespace Biblioteca.Domain.Repositories
     public interface IBibliotecaRepository
     {
         //Métodos que nossa class terá que implementar.
-        void Adicionar(Livros biblioteca);
-        void Alterar(Livros biblioteca);
-        IEnumerable<Livros> ListarBibliotecas();
-        Livros ObterPorId(int id);
-        void RemoverBiblioteca(Livros biblioteca);
+        void Adicionar(Livro biblioteca);
+        void Alterar(Livro biblioteca);
+        IEnumerable<Livro> ListarBibliotecas();
+        Livro ObterPorId(int id);
+        void RemoverBiblioteca(Livro biblioteca);
     }
 }
