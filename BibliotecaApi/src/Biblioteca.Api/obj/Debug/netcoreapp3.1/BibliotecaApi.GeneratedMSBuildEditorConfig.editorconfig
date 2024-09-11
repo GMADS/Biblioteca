@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = BibliotecaApi
-build_property.ProjectDir = C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Api\
+build_property.ProjectDir = C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Api\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
