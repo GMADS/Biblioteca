@@ -61,3 +61,17 @@ C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\B
 C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.CopyComplete
 C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.dll
 C:\Repo\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.pdb
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Infra.deps.json
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Infra.dll
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Infra.pdb
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Domain.dll
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\bin\Debug\netstandard2.0\Biblioteca.Domain.pdb
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.AssemblyReference.cache
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.AssemblyInfoInputs.cache
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.AssemblyInfo.cs
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.csproj.CoreCompileInputs.cache
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.sourcelink.json
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Bibliote.960C0415.Up2Date
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.dll
+C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Infra\obj\Debug\netstandard2.0\Biblioteca.Infra.pdb
