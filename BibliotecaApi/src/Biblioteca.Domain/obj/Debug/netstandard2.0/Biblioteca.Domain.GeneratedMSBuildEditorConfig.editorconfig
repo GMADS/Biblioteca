@@ -3,3 +3,6 @@ build_property.RootNamespace = Biblioteca.Domain
 build_property.ProjectDir = C:\dev\Biblioteca\BibliotecaApi\src\Biblioteca.Domain\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
