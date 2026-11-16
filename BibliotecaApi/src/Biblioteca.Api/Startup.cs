@@ -23,20 +23,18 @@ namespace BibliotecaApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // Este método é chamado pelo runtime. Use para adicionar serviços ao container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BibliotecaContext>(opt =>
-              opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
             services.AddControllers();
 
             AddSwagger(services);
-            
-            //Fazendo injeção de dependência.
-            services.AddTransient<IBibliotecaRepository, BibliotecaRepository>();
+
+            // Injeção de dependência para o repositório usando SqlClient
+            services.AddScoped<IBibliotecaRepository, BibliotecaRepository>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // Este método é chamado pelo runtime. Use para configurar o pipeline HTTP.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -75,4 +73,5 @@ namespace BibliotecaApi
             });
         }
     }
+
 }

@@ -59,7 +59,8 @@ namespace BibliotecaApi.Controllers
 
             bibliotecaAntiga.NomeDoLivro = livro.NomeDoLivro;
             bibliotecaAntiga.NomeDoAutor = livro.NomeDoAutor;
-            bibliotecaAntiga.NumeroDePaginas = livro.NumeroDePaginas; 
+            bibliotecaAntiga.NumeroDePaginas = livro.NumeroDePaginas;
+            bibliotecaAntiga.Id = id;
             _repositorio.Alterar(bibliotecaAntiga);
             return Ok();           
         }

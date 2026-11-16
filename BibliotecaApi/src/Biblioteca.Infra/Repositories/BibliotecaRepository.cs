@@ -1,56 +1,121 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Biblioteca.Domain.Entities;
 using Biblioteca.Domain.Repositories;
-using Biblioteca.Infra.Contexts;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.SqlClient;
 
 namespace Biblioteca.Infra.Repositories
 {
-    public class BibliotecaRepository :IBibliotecaRepository
+    using System;
+using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
+
+public class BibliotecaRepository : IBibliotecaRepository
+{
+    private readonly string _connectionString;
+
+    public BibliotecaRepository(IConfiguration configuration)
     {
-        private readonly BibliotecaContext _context;
+        _connectionString = configuration.GetConnectionString("connectionString");
+    }
 
+    public void Adicionar(Livro biblioteca)
+    {
+        using (var conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+            var cmd = new SqlCommand(
+                "INSERT INTO Livros (NomeDoAutor, NomeDoLivro, NumeroDePaginas) VALUES (@NomeoDoAutor, @NomeDoLivro, @NumeroDePaginas)", conn);
 
-        public BibliotecaRepository(BibliotecaContext context)
-        {
-            _context = context;
-        }
+            cmd.Parameters.AddWithValue("@NomeoDoAutor", biblioteca.NomeDoAutor);
+            cmd.Parameters.AddWithValue("@NomeDoLivro", biblioteca.NomeDoLivro);
+            cmd.Parameters.AddWithValue("@NumeroDePaginas", biblioteca.NumeroDePaginas);
 
-        public void Adicionar(Livro biblioteca)
-        {
-            _context.Add(biblioteca);
-            _context.SaveChanges();
-        }
-
-        public void Alterar(Livro biblioteca)
-        {
-            _context.Entry(biblioteca).State = EntityState.Modified;
-            _context.SaveChanges();
-        }
-
-        public IEnumerable<Livro> ListarBibliotecas()
-        {
-            return _context.Bibliotecas.ToList();
-        }
-
-        public Livro ObterPorId(int id)
-        {
-            try
-            {
-                return _context.Bibliotecas.FirstOrDefault(x => x.Id == id);
-            }
-            catch (System.Exception ex)
-            {
-                
-                throw new ArgumentException("Erro ao obter livro");
-            }
-        }
-        public void RemoverBiblioteca(Livro biblioteca)
-        {
-            _context.Remove(biblioteca);
-            _context.SaveChanges();
+            cmd.ExecuteNonQuery();
         }
     }
+
+    public void Alterar(Livro biblioteca)
+    {
+        using (var conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+            var cmd = new SqlCommand(
+                @"UPDATE Livros 
+                            SET NomeDoAutor=@NomeoDoAutor, NomeDoLivro=@NomeDoLivro, NumeroDePaginas=@NumeroDePaginas
+                        WHERE Id=@Id", conn);
+
+            cmd.Parameters.AddWithValue("@Id", biblioteca.Id);
+            cmd.Parameters.AddWithValue("@NomeoDoAutor", biblioteca.NomeDoAutor);
+            cmd.Parameters.AddWithValue("@NomeDoLivro", biblioteca.NomeDoLivro);
+            cmd.Parameters.AddWithValue("@NumeroDePaginas", biblioteca.NumeroDePaginas);
+
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public IEnumerable<Livro> ListarBibliotecas()
+    {
+        var lista = new List<Livro>();
+
+        using (var conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+            var cmd = new SqlCommand("SELECT Id, NomeDoAutor, NomeDoLivro, NumeroDePaginas FROM Livros", conn);
+
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    lista.Add(new Livro
+                    {
+                        Id = reader.GetInt32(0),
+                        NomeDoAutor = reader.GetString(1),
+                        NomeDoLivro = reader.GetString(2),
+                        NumeroDePaginas = reader.GetInt32(3)
+                    });
+                }
+            }
+        }
+
+        return lista;
+    }
+
+    public Livro ObterPorId(int id)
+    {
+        using (var conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+            var cmd = new SqlCommand("SELECT Id, NomeDoAutor, NomeDoLivro, NumeroDePaginas FROM Livros WHERE Id=@Id", conn);
+            cmd.Parameters.AddWithValue("@Id", id);
+
+            using (var reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return new Livro
+                    {
+                        Id = reader.GetInt32(0),
+                        NomeDoAutor = reader.GetString(1),
+                        NomeDoLivro = reader.GetString(2),
+                        NumeroDePaginas = reader.GetInt32(3)
+                    };
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public void RemoverBiblioteca(Livro biblioteca)
+    {
+        using (var conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+            var cmd = new SqlCommand("DELETE FROM Livros WHERE Id=@Id", conn);
+            cmd.Parameters.AddWithValue("@Id", biblioteca.Id);
+
+            cmd.ExecuteNonQuery();
+        }
+    }
+}
+
 }
