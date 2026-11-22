@@ -1,0 +1,32 @@
+name: .NET 8 CI
+
+on:
+  push:
+    branches: [ developer ]
+  pull_request:
+    branches: [ developer ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore BibliotecaApi/src/BibliotecaApi.sln
+
+      - name: Build
+        run: dotnet build BibliotecaApi/src/BibliotecaApi.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test BibliotecaApi/src/BibliotecaApi.sln --configuration Release --no-build --logger "trx;LogFileName=test-results.trx"
