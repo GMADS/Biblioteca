@@ -2,81 +2,77 @@ using Biblioteca.Domain.Entities;
 using Biblioteca.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BibliotecaApi.Controllers
+namespace BibliotecaApi.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class BibliotecaController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class BibliotecaController : ControllerBase
-    { 
-        private readonly IBibliotecaRepository _repositorio;
+    private readonly IBibliotecaRepository _repositorio;
 
+    public BibliotecaController(IBibliotecaRepository repositorio)
+    {
+        _repositorio = repositorio;
+    }
 
-        public BibliotecaController(IBibliotecaRepository repositorio)
+    [HttpGet("{id:int}")]
+    public IActionResult ObterBiblioteca(int id)
+    {
+        var livro = _repositorio.ObterPorId(id);
+        return livro is null ? NotFound() : Ok(livro);
+    }
+
+    [HttpGet]
+    public IActionResult ObterBiblioteca()
+    {
+        return Ok(_repositorio.ListarBibliotecas());
+    }
+
+    [HttpPost]
+    public IActionResult AdicionarLivro([FromBody] Livro livro)
+    {
+        if (!ModelState.IsValid)
         {
-            _repositorio = repositorio;
+            return ValidationProblem(ModelState);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult ObterBiblioteca(int id)
-        {
-            try
-            {
-                var bibliotecaAntiga = _repositorio.ObterPorId(id);
-                if(bibliotecaAntiga == null)
-                {
-                    return NotFound();
-                }
-                return Ok(bibliotecaAntiga);            
-            }
-            catch (System.Exception ex)
-            {            
-                throw ex;
-            }
-        }
-        [HttpGet()]
-        public IActionResult ObterBiblioteca()
-        {
-            var TodosOsLivros =  _repositorio.ListarBibliotecas();
+        _repositorio.Adicionar(livro);
+        return Ok();
+    }
 
-            return Ok(TodosOsLivros);            
+    [HttpPut("{id:int}")]
+    public IActionResult AlterarLivro(int id, [FromBody] Livro livro)
+    {
+        if (!ModelState.IsValid)
+        {
+            return ValidationProblem(ModelState);
         }
 
-        [HttpPost()]
-        public IActionResult AdicionarLivro( [FromBody] Livro livro)
+        var livroExistente = _repositorio.ObterPorId(id);
+        if (livroExistente is null)
         {
-            _repositorio.Adicionar(livro);
-            return Ok();
+            return NotFound();
         }
 
-         [HttpPut("{id}")]
-        public IActionResult AlterarLivro(int id,[FromBody] Livro livro)      
-        {
-            var bibliotecaAntiga = _repositorio.ObterPorId(id);
-            if(bibliotecaAntiga == null)
-            {
-                return NotFound();
-            }
+        livroExistente.NomeDoLivro = livro.NomeDoLivro;
+        livroExistente.NomeDoAutor = livro.NomeDoAutor;
+        livroExistente.NumeroDePaginas = livro.NumeroDePaginas;
+        livroExistente.Id = id;
 
-            bibliotecaAntiga.NomeDoLivro = livro.NomeDoLivro;
-            bibliotecaAntiga.NomeDoAutor = livro.NomeDoAutor;
-            bibliotecaAntiga.NumeroDePaginas = livro.NumeroDePaginas;
-            bibliotecaAntiga.Id = id;
-            _repositorio.Alterar(bibliotecaAntiga);
-            return Ok();           
+        _repositorio.Alterar(livroExistente);
+        return NoContent();
+    }
+
+    [HttpDelete("{id:int}")]
+    public IActionResult ExcluirLivro(int id)
+    {
+        var livro = _repositorio.ObterPorId(id);
+        if (livro is null)
+        {
+            return NotFound();
         }
 
-         [HttpDelete()]
-        public IActionResult ExcluirLivro(int id)      
-        {
-            var biblioteca = _repositorio.ObterPorId(id);
-            if(biblioteca == null)
-            {
-                return NotFound();
-            }
-            _repositorio.RemoverBiblioteca(biblioteca);
-
-            return Ok();            
-        }
-
+        _repositorio.RemoverBiblioteca(livro);
+        return NoContent();
     }
 }
