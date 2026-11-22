@@ -42,6 +42,10 @@ namespace BibliotecaApi
                 app.UseDeveloperExceptionPage();
             }
 
+            // Publica a interface web hospedada em wwwroot.
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
