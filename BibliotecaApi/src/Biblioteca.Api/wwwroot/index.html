@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101827"><title>Biblioteca · Gestão de acervo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/"><span class="brand-mark">B</span><span>Biblioteca<small>PAINEL DE GESTÃO</small></span></a>
+    <div class="nav-label">MENU PRINCIPAL</div>
+    <a class="nav-item active" href="/"><span>▦</span> Acervo de livros</a>
+    <div class="sidebar-bottom"><div class="side-icon">✦</div><strong>Seu acervo, organizado.</strong><p>Gerencie os livros da sua biblioteca em um só lugar.</p></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="breadcrumb">Biblioteca <span>/</span> <b>Acervo</b></div><div class="profile"><span class="avatar">GM</span><span><b>Administrador</b><small>Gestão da biblioteca</small></span></div></header>
+    <section class="content">
+      <div class="page-heading"><div><div class="eyebrow">VISÃO GERAL</div><h1>Acervo de livros</h1><p>Gerencie, consulte e mantenha seus livros sempre atualizados.</p></div><button class="btn btn-primary" id="newBook"><span>＋</span> Adicionar livro</button></div>
+      <div class="stats">
+        <article class="stat-card"><div class="stat-icon purple">▤</div><div><span>Total de livros</span><strong id="totalBooks">—</strong><small>Livros cadastrados</small></div></article>
+        <article class="stat-card"><div class="stat-icon blue">▧</div><div><span>Total de páginas</span><strong id="totalPages">—</strong><small>Somatório do acervo</small></div></article>
+        <article class="stat-card"><div class="stat-icon green">✎</div><div><span>Autores</span><strong id="totalAuthors">—</strong><small>Autores distintos</small></div></article>
+      </div>
+      <section class="panel">
+        <div class="panel-heading"><div><h2>Todos os livros</h2><p>Consulte e gerencie os registros cadastrados.</p></div><button class="btn btn-light" id="refresh">↻ Atualizar</button></div>
+        <div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar por título ou autor..."></label><span class="result-count" id="resultCount"></span></div>
+        <div class="table-wrap"><table><thead><tr><th>LIVRO</th><th>AUTOR</th><th>PÁGINAS</th><th class="actions-col">AÇÕES</th></tr></thead><tbody id="booksTable"><tr><td colspan="4" class="empty">Carregando acervo...</td></tr></tbody></table></div>
+        <div class="panel-footer"><span id="footerCount">—</span><span>Biblioteca · Gestão de acervo</span></div>
+      </section>
+      <div class="toast" id="toast" role="status"></div>
+    </section>
+  </main>
+  <div class="modal-backdrop" id="modal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><div class="eyebrow">ACERVO</div><h2 id="modalTitle">Adicionar livro</h2><p id="modalDescription">Preencha os dados para cadastrar um novo livro.</p></div><button class="icon-btn" id="closeModal" aria-label="Fechar">×</button></div>
+    <form id="bookForm"><input type="hidden" id="bookId"><label>Título do livro<input id="bookTitle" name="NomeDoLivro" maxlength="180" required placeholder="Ex.: O Pequeno Príncipe"></label><label>Nome do autor<input id="bookAuthor" name="NomeDoAutor" maxlength="140" required placeholder="Ex.: Antoine de Saint-Exupéry"></label><label>Número de páginas<input id="bookPages" name="NumeroDePaginas" type="number" min="1" step="1" required placeholder="Ex.: 96"></label><div class="form-error" id="formError"></div><div class="modal-actions"><button type="button" class="btn btn-light" id="cancelModal">Cancelar</button><button type="submit" class="btn btn-primary" id="saveBook">Salvar livro</button></div></form>
+  </section></div>
+  <div class="modal-backdrop" id="detailModal" aria-hidden="true"><section class="modal detail-modal" role="dialog" aria-modal="true"><div class="modal-head"><div><div class="eyebrow">DETALHES DO REGISTRO</div><h2>Informações do livro</h2></div><button class="icon-btn" id="closeDetail" aria-label="Fechar">×</button></div><div id="detailContent"></div><div class="modal-actions"><button class="btn btn-light" id="detailClose">Fechar</button><button class="btn btn-primary" id="detailEdit">Editar livro</button></div></section></div>
+  <script src="/app.js" defer></script>
+</body></html>
