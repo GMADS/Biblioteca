@@ -2375,8 +2375,6 @@
           "Microsoft.Data.SqlClient": "7.1.1",
           "Microsoft.EntityFrameworkCore": "3.1.1",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.1",
-          "Microsoft.Extensions.Configuration": "11.0.0-rc.2.26504.105",
-          "Microsoft.Extensions.Configuration.Json": "11.0.0-rc.2.26504.105",
           "System.ComponentModel.Annotations": "5.0.0",
           "runtime.native.System.Data.SqlClient.sni": "4.7.0"
         },
@@ -7367,8 +7365,6 @@
       "Microsoft.Data.SqlClient >= 7.1.1",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.1",
-      "Microsoft.Extensions.Configuration >= 11.0.0-rc.2.26504.105",
-      "Microsoft.Extensions.Configuration.Json >= 11.0.0-rc.2.26504.105",
       "Microsoft.Extensions.PlatformAbstractions >= 1.1.0",
       "NuGet >= 0.0.1",
       "Swashbuckle.AspNetCore >= 5.6.1",
@@ -7446,14 +7442,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.1.1, )"
-          },
-          "Microsoft.Extensions.Configuration": {
-            "target": "Package",
-            "version": "[11.0.0-rc.2.26504.105, )"
-          },
-          "Microsoft.Extensions.Configuration.Json": {
-            "target": "Package",
-            "version": "[11.0.0-rc.2.26504.105, )"
           },
           "Microsoft.Extensions.PlatformAbstractions": {
             "target": "Package",

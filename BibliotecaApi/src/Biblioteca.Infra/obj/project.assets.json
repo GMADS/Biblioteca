@@ -3026,8 +3026,6 @@
       "Microsoft.EntityFrameworkCore >= 3.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.1",
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.1",
-      "Microsoft.Extensions.Configuration >= 11.0.0-rc.2.26504.105",
-      "Microsoft.Extensions.Configuration.Json >= 11.0.0-rc.2.26504.105",
       "NETStandard.Library >= 2.0.3",
       "System.ComponentModel.Annotations >= 5.0.0",
       "runtime.native.System.Data.SqlClient.sni >= 4.7.0"
@@ -3105,14 +3103,6 @@
           "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[3.1.1, )"
-          },
-          "Microsoft.Extensions.Configuration": {
-            "target": "Package",
-            "version": "[11.0.0-rc.2.26504.105, )"
-          },
-          "Microsoft.Extensions.Configuration.Json": {
-            "target": "Package",
-            "version": "[11.0.0-rc.2.26504.105, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",

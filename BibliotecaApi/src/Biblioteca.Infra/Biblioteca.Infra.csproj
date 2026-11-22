@@ -12,8 +12,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="11.0.0-rc.2.26504.105" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="11.0.0-rc.2.26504.105" />
     <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>

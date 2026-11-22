@@ -70,14 +70,6 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[11.0.0-rc.2.26504.105, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[11.0.0-rc.2.26504.105, )"
-            },
             "Microsoft.Extensions.PlatformAbstractions": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -291,14 +283,6 @@
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[3.1.1, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[11.0.0-rc.2.26504.105, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[11.0.0-rc.2.26504.105, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
